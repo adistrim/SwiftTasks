@@ -1,0 +1,54 @@
+# macOS System Files
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+.idea/
+
+# Swift Package Manager
+/.build/
+/Packages
+.swiftpm/
+.swift-version
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+# Snapfile.lock
+
+# Firebase
+GoogleService-Info.plist
+
+# Temporary and Log Files
+*.swp
+*.swo
+*.lock
+*.log
+
+# Generated Files
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Archives
+*.xcarchive
+
+# Other IDEs
+.vscode/
+.idea/
