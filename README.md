@@ -10,7 +10,11 @@ A simple, elegant todo list application built with SwiftUI.
 - 🗑️ Swipe to delete functionality
 
 ## Application Preview
-<img src="doc-img/screenshot.png" alt="Application Preview" width="200"/>
+<div style="display: flex; gap: 10px;">
+  <img src="doc-img/screenshot_welcome_screen.png" alt="Welcome Screen" width="200"/>
+  <img src="doc-img/screenshot_guest_user.png" alt="Guest user registration" width="200"/>
+  <img src="doc-img/screenshot_home_screen.png" alt="Home Screen" width="200"/>
+</div>
 <br>
 Test Device: iPhone 16 Pro Simulator
 
