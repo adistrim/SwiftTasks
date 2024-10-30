@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct todoApp: App {
+    @StateObject private var userManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userManager.isFirstLaunch {
+                WelcomeView().environmentObject(userManager)
+            } else {
+                ContentView().environmentObject(userManager)
+            }
         }
     }
 }
