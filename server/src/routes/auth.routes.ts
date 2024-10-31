@@ -61,7 +61,8 @@ router.post(
             }
 
             const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET!);
-            res.json({ token });
+
+            res.json({ token, name: user.name });
         } catch (error) {
             res.status(500).json({ message: 'Server error' });
         }
