@@ -10,6 +10,7 @@ DerivedData/
 *.xccheckout
 *.xcscmblueprint
 .idea/
+xcshareddata/
 
 # Swift Package Manager
 /.build/
@@ -53,7 +54,10 @@ GoogleService-Info.plist
 .vscode/
 .idea/
 
-# sever files
+# Server files
 dist/
 node_modules/
 .env
+
+# Ignore environment variables configuration
+xcshareddata/
