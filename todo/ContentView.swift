@@ -54,7 +54,7 @@ struct ContentView: View {
                                         Label("Settings", systemImage: "gear")
                                     }
                                     Button(role: .destructive, action: {
-                                        // in coming
+                                        userManager.logout()
                                     }) {
                                         Label("Logout", systemImage: "arrow.right.door.fill")
                                     }

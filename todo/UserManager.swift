@@ -11,6 +11,7 @@ class UserManager: ObservableObject {
     @Published var isFirstLaunch: Bool
     @Published var username: String?
     @Published var isGuest: Bool
+    @Published var userToken: String?
     
     private let defaults = UserDefaults.standard
     
@@ -18,6 +19,7 @@ class UserManager: ObservableObject {
         self.isFirstLaunch = !defaults.bool(forKey: "hasLaunchedBefore")
         self.username = defaults.string(forKey: "username")
         self.isGuest = defaults.bool(forKey: "isGuest")
+        self.userToken = defaults.string(forKey: "userToken")
     }
     
     func completeFirstLaunch() {
@@ -31,5 +33,29 @@ class UserManager: ObservableObject {
         defaults.set(name, forKey: "username")
         defaults.set(true, forKey: "isGuest")
         completeFirstLaunch()
+    }
+    
+    func setNormalUser(token: String, name: String) {
+        username = name
+        userToken = token
+        isGuest = false
+        
+        defaults.set(name, forKey: "username")
+        defaults.set(token, forKey: "userToken")
+        defaults.set(false, forKey: "isGuest")
+        completeFirstLaunch()
+    }
+    
+    func logout() {
+        username = nil
+        userToken = nil
+        isGuest = false
+        
+        defaults.removeObject(forKey: "username")
+        defaults.removeObject(forKey: "userToken")
+        defaults.removeObject(forKey: "isGuest")
+        
+        defaults.removeObject(forKey: "hasLaunchedBefore")
+        isFirstLaunch = true
     }
 }
