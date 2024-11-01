@@ -20,13 +20,13 @@ struct ContentView: View {
     
     var filteredTodos: [Todo] {
         switch selectedFilter {
-        case .all:
-            return todoManager.todos
-        case .active:
-            return todoManager.todos.filter { !$0.isCompleted }
-        case .completed:
-            return todoManager.todos.filter { $0.isCompleted }
-        }
+            case .all:
+                return todoManager.todos
+            case .active:
+                return todoManager.todos.filter { !$0.isCompleted }
+            case .completed:
+                return todoManager.todos.filter { $0.isCompleted }
+            }
     }
     
     var body: some View {
